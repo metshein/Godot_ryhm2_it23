@@ -1,6 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://bivi6q1821c2g"]
 
-[ext_resource type="Script" path="res://ylesanded4.gd" id="1_4qcy6"]
+[ext_resource type="Script" path="res://ylesanded5.gd" id="1_4ayvq"]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_4qcy6")
+script = ExtResource("1_4ayvq")
+
+[node name="Node" type="Node" parent="."]

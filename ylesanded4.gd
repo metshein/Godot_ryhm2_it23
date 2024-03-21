@@ -5,6 +5,10 @@ var players = ["Feake","Bradwell","Dreger","Bloggett","Lambole","Daish","Lippiet
 	"Allchin","Doghartie","Brierly","Pirrone","Fairnie","Seal","Scoffins",
 	"Galer","Matevosian","DeBlase","Cubbin","Izzett","Ebi","Clohisey",
 	"Prater","Probart","Samwaye","Concannon","MacLure","Eliet","Kundt","Reyes"]
+	
+	
+var player = {"posx":100, "posy":38, "health":16, "items":["sword","stuff", "bow"], "gold":100}
+
 
 func _ready():
 	print("Mängijate arv: ",len(players))
@@ -21,3 +25,8 @@ func _ready():
 			pikimNimi = i
 		print(i)
 	print("Pikim nimi: ",pikimNimi)	
+	
+	
+	for i in range(5):
+		player.gold+=randi() % 19
+	print("Mängijal on ",player.gold," kulda")
