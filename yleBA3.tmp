@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bivi6q1821c2g"]
+
+[ext_resource type="Script" path="res://ylesanded1.gd" id="1_458du"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_458du")
