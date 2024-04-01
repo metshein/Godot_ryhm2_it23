@@ -1,8 +1,69 @@
-[gd_scene load_steps=2 format=3 uid="uid://bivi6q1821c2g"]
+[gd_scene load_steps=4 format=3 uid="uid://bivi6q1821c2g"]
 
-[ext_resource type="Script" path="res://ylesanded5.gd" id="1_4ayvq"]
+[ext_resource type="Script" path="res://ylesanded6.gd" id="1_gxd56"]
+[ext_resource type="Texture2D" uid="uid://cevxdo2k6perd" path="res://assets/3884351-kenafinalbossthumb.jpg" id="2_hnbir"]
+[ext_resource type="FontFile" uid="uid://bgggcns5lu4p2" path="res://assets/VT323-Regular.ttf" id="3_xhsdi"]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_4ayvq")
+script = ExtResource("1_gxd56")
 
 [node name="Node" type="Node" parent="."]
+
+[node name="3884351-kenafinalbossthumb" type="Sprite2D" parent="."]
+position = Vector2(577.5, 325.5)
+scale = Vector2(0.58638, 0.623486)
+texture = ExtResource("2_hnbir")
+metadata/_edit_lock_ = true
+
+[node name="tegevused" type="RichTextLabel" parent="3884351-kenafinalbossthumb"]
+offset_left = -951.096
+offset_top = -489.705
+offset_right = -535.096
+offset_bottom = -379.705
+theme_override_fonts/normal_font = ExtResource("3_xhsdi")
+theme_override_font_sizes/normal_font_size = 80
+text = "Tegevused
+"
+scroll_active = false
+
+[node name="elud" type="RichTextLabel" parent="3884351-kenafinalbossthumb"]
+offset_left = 553.765
+offset_top = 401.862
+offset_right = 969.765
+offset_bottom = 511.862
+theme_override_fonts/normal_font = ExtResource("3_xhsdi")
+theme_override_font_sizes/normal_font_size = 80
+text = "Elud: 100
+"
+
+[node name="skoor" type="RichTextLabel" parent="3884351-kenafinalbossthumb"]
+offset_left = 488.261
+offset_top = -489.705
+offset_right = 904.261
+offset_bottom = -379.705
+theme_override_fonts/normal_font = ExtResource("3_xhsdi")
+theme_override_font_sizes/normal_font_size = 80
+text = "Skoor: 100
+"
+
+[node name="padrunid" type="RichTextLabel" parent="3884351-kenafinalbossthumb"]
+offset_left = -951.096
+offset_top = 383.801
+offset_right = -535.096
+offset_bottom = 493.801
+theme_override_fonts/normal_font = ExtResource("3_xhsdi")
+theme_override_font_sizes/normal_font_size = 80
+text = "Salves: 5
+"
+
+[node name="gameover" type="RichTextLabel" parent="3884351-kenafinalbossthumb"]
+offset_left = -529.0
+offset_top = -270.0
+offset_right = 636.0
+offset_bottom = 375.0
+theme_override_colors/default_color = Color(1, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_xhsdi")
+theme_override_font_sizes/normal_font_size = 300
+text = "GAME OVER
+You win
+"
