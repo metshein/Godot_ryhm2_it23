@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 window/size/resizable=false
 
+[editor]
+
+movie_writer/movie_file="C:/Users/mario.metshein/Desktop/mäng.avi"
+
 [input]
 
 shoot={
