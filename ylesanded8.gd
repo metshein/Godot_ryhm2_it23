@@ -1,4 +1,5 @@
 extends Node2D
+
 var playerScore = 0
 var enemyScore = 0
 
@@ -9,16 +10,16 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	$"player_score".text = "Skoor: "+str(playerScore)
 	$"enemy_score".text = "Skoor: "+str(enemyScore)
 
 func game(valik):
 	var arvuti_valikud = ["kivi","paber","käärid"]
-	var arvuti_valik =  arvuti_valikud[randi() % arvuti_valikud.size()]
+	var arvuti_valik =  arvuti_valikud[randi() % 3]
 	$enemy_choice.text = arvuti_valik
 	print("Arvuti valik:" + arvuti_valik)
-	print("Kasutaja valik: "+valik)
+	print("Kasutaja valik: " + valik)
 	
 	if arvuti_valik == valik:
 		$tulemus.text = "Viik"
@@ -52,11 +53,12 @@ func game(valik):
 			print("YOU WON")
 		$"player_score".text = "Skoor: "+str(playerScore)
 		$"enemy_score".text = "Skoor: "+str(enemyScore)
-		get_tree().quit()
+		get_tree().paused = true
 	
 
 func _on_new_game_pressed():
 	$tulemus.text = "Uus mäng"
+	get_tree().reload_current_scene()
 
 func _on_kivi_pressed():
 	$"player_choice".text = "KIVI"
